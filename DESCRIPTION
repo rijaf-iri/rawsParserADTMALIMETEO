@@ -1,0 +1,11 @@
+Package: rawsParserADTMALIMETEO
+Version: 1.0
+Title: Agence Nationale de la Météorologie (MaliMeteo) Automatic Weather Station (AWS) Data Parsing
+Description: Process data from MaliMeteo's AWS Networks. It fetches the data from the networks database. The data are converted to a standard format used by MaliMeteo's AWS Data Tool (ADT).
+Author: Rija Faniriantsoa <rijaf@iri.columbia.edu>
+Maintainer: Rija Faniriantsoa <rijaf@iri.columbia.com>
+License: GPL-3
+Encoding: UTF-8
+NeedsCompilation: no
+Date: 2023-03-01
+RoxygenNote: 7.2.3
