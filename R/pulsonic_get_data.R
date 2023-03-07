@@ -50,6 +50,13 @@ get.pulsonic.data <- function(dirAWS, dirPLUSO){
         start <- strptime(awsL[, 2], '%Y%m%d%H%M', tz)
         end <- strptime(awsL[, 3], '%Y%m%d%H%M', tz)
 
+        ina <- is.na(start) | is.na(end)
+        aws_list <- aws_list[!ina]
+        if(length(aws_list) == 0) next
+
+        start <- start[!ina]
+        end <- end[!ina]
+
         time0 <- as.POSIXct(awsInfo$last[j], origin = origin, tz = tz)
         if(is.na(time0)) time0 <- start[order(start)][1]
         time1 <- Sys.time()
